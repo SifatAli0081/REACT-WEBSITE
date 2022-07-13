@@ -16,7 +16,7 @@ const Home = ()=> {
 
     return (
         <div> 
-           {posts.titel}
+          Titel:{posts.titel}
            <h1>Home</h1>
 
         </div>
