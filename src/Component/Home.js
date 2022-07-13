@@ -1,26 +1,27 @@
-import React, {useState , useEffect} from "react";
-
-const Home = ()=> {
-    const [posts,setPosts] = useState ([]);
-
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users?fbclid=IwAR2T27a8Y81n3VtgwsXg5KSfeeezGSFwOt1Trl-R9J_UAlMzjQrNGOlap7g')
-        .then((response) => response.json())
-        .then((data) =>{
-            console.log(data);
-            setPosts(data[10]);
+import React, {useState,useEffect} from 'react';
+import Card from './Card';
+const Home = () => {
+    const [posts,setPosts] = useState([])
+      useEffect(() =>{
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then((response)=>response.json())
+        .then((data)=>{
+            console.log("sampal",data);
+            setPosts(data);  
         })
-        .catch((error) => {
-            console.log(error);})
-    },[]);
-
-    return (
-        <div> 
-          Titel:{posts.titel}
-           <h1>Home</h1>
-
-        </div>
-    );
+     }) 
+       return (
+           <div>
+             {
+                posts.map((posts)=> (
+                    <Card
+                  name = {posts.name}
+                   email= {posts.email}
+                   id = {posts.id}
+                    />
+                ))
+             }
+           </div>
+       );
 };
-
-export default Home;
+ export default Home;
