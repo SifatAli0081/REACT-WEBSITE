@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+i{
+    margin: 5px 5px 5px 5px;
+}
+.card_container{
+    background: black;
+    border-radius:20px ;  
+    margin-bottom: 30px;
+}
+.card_link{
+    
+    flex: 1 ;
+    text-align: left;
+    margin: 10px 0px 0px 0px;
+}
+.card_link ul li{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    padding: 5px 10px;
+}
+.card_link ul li a{
+    color: white;
+    font-size: medium;
+    text-decoration: none;
+    font-style: 13px;
+}
+.btn{
+   
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    color: white 2px ;
+    border: 1px solid white;
+    padding: 5px 5px;
+    height: 50px;
+    width: 100px;
+    border-radius:25px ;  
+    cursor: pointer;
+ }
+ .btn:hover{
+     border: 1px solid black;
+     background: white;
+     transition: 0.5s;
+ }

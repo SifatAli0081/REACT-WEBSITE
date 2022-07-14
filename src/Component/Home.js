@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
-import Card from './Card';
+import Card from './Home1';
+
 const Home = () => {
     const [posts,setPosts] = useState([])
       useEffect(() =>{
@@ -17,7 +18,14 @@ const Home = () => {
                     <Card
                   name = {posts.name}
                    email= {posts.email}
-                   id = {posts.id}
+                   city= {posts.address.city}
+                   street = {posts.address.street}
+                   suite= {posts.address.suite}
+                   zipcode= {posts.address.zipcode}
+                   phone= {posts.phone}
+                   website= {posts.website}
+                   company= {posts.company.name}
+                      tagline={posts.company.catchPhrase}
                     />
                 ))
              }
